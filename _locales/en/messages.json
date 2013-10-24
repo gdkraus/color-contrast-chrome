@@ -1,0 +1,100 @@
+{
+   "cancel": {
+      "message": "Cancel"
+   },
+   "capture_area": {
+      "message": "Capture Page Region"
+   },
+   "capture_screen": {
+      "message": "Capture Screen Region"
+   },
+   "capture_tip": {
+      "message": "Drag and Capture (Press Esc to Exit)"
+   },
+   "capture_webpage": {
+      "message": "Capture Whole Page"
+   },
+   "capture_window_warning": {
+      "message": "Capture Visible Content<br />(Refresh page for more options)"
+   },
+   "capture_window": {
+      "message": "Capture Visible Content"
+   },
+   "capturing": {
+      "message": "Capturing, please wait..."
+   },
+   "close": {
+      "message": "Close"
+   },
+   "copy": {
+      "message": "Copy"
+   },
+   "default_title": {
+      "message": "Color Contrast Analyzer"
+   },
+   "description": {
+      "message": "Analyze a web page or portion of a web page for conformance with WCAG 2.0 Color Contrast requirements."
+   },
+   "hot_key_conflict": {
+      "message": "Shortcuts conflict."
+   },
+   "loading": {
+      "message": "The page is loading, please wait."
+   },
+   "name": {
+      "message": "Color Contrast Analyzer"
+   },
+   "ok": {
+      "message": "OK"
+   },
+   "option": {
+      "message": "Options"
+   },
+   "options": {
+      "message": "Color Contrast Analyzer Options"
+   },
+   "wcag_level": {
+      "message": "WCAG 2 Level: "
+   },
+   "wcag_aa_small_level": {
+      "message": "Level AA, Small Non-Bold Text"
+   },
+   "wcag_aa_large_level": {
+      "message": "Level AA, Medium Bold and Large Non-Bold Text"
+   },
+   "wcag_aaa_small_level": {
+      "message": "Level AAA, Small Non-Bold Text"
+   },
+   "wcag_aaa_large_level": {
+      "message": "Level AAA, Medium Bold and Large Non-Bold Text"
+   },
+
+   "save": {
+      "message": "Save"
+   },
+   "save_and_close": {
+      "message": "Save & Close"
+   },
+   "shortcut_setting": {
+      "message": "Shortcut Settings:"
+   },
+   "shortcutsetting_text": {
+      "message": "Enable keyboard shortcuts"
+   },
+
+   "special": {
+      "message": "This is a special page. Unable to perform screen capture actions on this page."
+   },
+   "text": {
+      "message": "Text"
+   },
+   "unknown_error": {
+      "message": "Unknown error."
+   },
+   "pixel_radius_header": {
+      "message": "Pixel Radius Scan"
+   },
+   "pixel_radius_label": {
+      "message": "Pixel Radius"
+   }
+}

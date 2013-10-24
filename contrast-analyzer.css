@@ -1,0 +1,96 @@
+body {
+  font-size: 12px;
+  font-family: arial, Verdana;
+  margin: 0;
+  padding: 0;
+  background: #959595;
+}
+#header {
+  background: url(images/toolbar_bg.png);
+  height: 36px;
+  overflow: hidden;
+}
+#showBox {
+   overflow: auto;
+}
+#photo {
+  
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#tip {
+  color: #333333;
+  padding: 0 5px;
+  height: 36px;
+  font-size: 13px;
+  line-height: 36px;
+  overflow: hidden;
+  text-align: left;
+  margin: 0 180px 0 300px;
+}
+.toolbar {
+  position:fixed;
+  height: 30px;
+  margin-left: 10px;
+  padding-top: 6px;
+}
+.layer {
+  font-size:12px;
+  font-family: arial;
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: 100;
+  line-height: 22px;
+  word-wrap: break-word;
+  text-align: left;
+  outline: 0;
+}
+.clear {
+  clear: both;
+}
+#mask-canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+button {
+  cursor: pointer;
+}
+input {
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0ecfb));
+  border: 1px solid #c0cddd;
+  cursor: pointer;
+  border-radius: 3px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#overlay {
+  position: absolute;
+  opacity: 0.3;
+  background: #000;
+  display: none;
+  z-index: 200;
+  top: 0;
+  left: 0;
+}
+
+#contrastMask {left:opx;position:absolute;top:0;z-index:9999;}
+
+#status {display:inline;margin-left:20px;font-weight:bold;}
+#levelEvaluated {display:inline;margin-left:20px;font-weight:bold;}
+#pixelRadius {display:inline;margin-left:20px;font-weight:bold;}
+#rescanButton {display:inline;margin-left:20px;}
+
+#percentComplete {font-weight:normal;}
+#levelEvaluatedText {font-weight:normal;}
+#pixelRadiusText {font-weight:normal;}

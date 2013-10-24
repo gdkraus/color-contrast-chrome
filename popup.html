@@ -1,0 +1,142 @@
+<!--
+
+Read license.txt for licensing information.
+
+-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+body {
+  font-family: arial, Verdana;
+  font-size: 12px;
+  width: auto;
+  overflow: visible;
+  margin-bottom: 2px;
+}
+.menu {
+  color: #3d5d6a;
+  line-height: 26px;
+  text-indent: .5em;
+  float: left;
+  white-space: nowrap;
+  background-repeat: no-repeat no-repeat;
+  background-position: 6px 5px;
+}
+.text {
+  float: left;
+  margin-left: 26px;
+}
+.shortcut {
+  color: #A1A192;
+  float: left;
+  margin-left: 26px;
+  display: none;
+}
+.menuI {
+  display: none;
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+  overflow: hidden;
+  border: 1px solid white;
+}
+li:hover {
+  border-radius: 3px 3px;
+  background: -webkit-gradient(linear, left top, left bottom,
+      color-stop(0, #fff),  color-stop(0.4, hsl(215, 67%, 97%)),
+      color-stop(0.41, hsl(213, 48%, 95%)));
+  border: solid 1px #c5cdd3;
+}
+#loadDiv {
+  color: #3d5d6a;
+  display: none;
+  font-weight: bold;
+  font-family: Verdana, simsun;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+#tip {
+  color: #3d5d6a;
+  font-size: 12px;
+  font-family: Verdana, simsun;
+  text-align: left;
+}
+.separator {
+  display: none;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  margin: 5px 0;
+}
+#option {
+  display: none;
+}
+#optionItem {
+  margin-left: 26px;
+}
+</style>
+<script src="hotkey_storage.js"></script>
+<script src="popup.js"></script>
+</head>
+<body>
+  <div id="loadDiv" ><img src="images/loading.gif" alt="">
+    <div id="capturing"></div>
+  </div>
+  <div id="tip"></div>
+  <div id="item">
+  <ul>
+    <li id="captureSpecialPageItem" class="menuI">
+      <div class="menu" id="captureSpecialPage"
+        style="background-image: url(images/screen.png);">
+        <span class="text" id="captureSpecialPageText"></span>
+      </div>
+    </li>
+	<li id="captureAreaItem" class="menuI">
+      <div class="menu" id="captureArea"
+        style="background-image: url(images/custom.png);">
+        <span class="text" id="captureAreaText"></span>
+        <span class="shortcut" id="captureAreaShortcut"></span>
+      </div>
+    </li>
+    <li id="captureWindowItem" class="menuI">
+      <div class="menu" id="captureWindow"
+        style="background-image: url(images/screen.png);">
+        <span class="text" id="captureWindowText"></span>
+        <span class="shortcut" id="captureWindowShortcut"></span>
+      </div>
+    </li>
+    <li id="captureWebpageItem" class="menuI">
+      <div class="menu" id="captureWebpage"
+        style="background-image: url(images/whole.png);">
+        <span class="text" id="captureWebpageText"></span>
+        <span class="shortcut" id="captureWebpageShortcut"</span>
+      </div>
+    </li>
+    <li id="captureScreenItem" class="menuI">
+      <div class="menu" id="captureScreen"
+        style="background-image: url(images/region.png);">
+        <span class="text" id="captureScreenText"></span>
+        <span class="shortcut" id="captureScreenShortcut"></span>
+      </div>
+    </li>
+    <div id="separatorItem" class="separator"></div>
+    <li id="option">
+      <div id="optionItem" class="menu"></div>
+    </li>
+  </ul>
+  </div>
+</body>
+</html>
