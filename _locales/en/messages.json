@@ -57,16 +57,16 @@
       "message": "WCAG 2 Level: "
    },
    "wcag_aa_small_level": {
-      "message": "Level AA, Small Non-Bold Text"
+      "message": "Level AA, Small Non-Bold Text (4.5:1)"
    },
    "wcag_aa_large_level": {
-      "message": "Level AA, Medium Bold and Large Non-Bold Text"
+      "message": "Level AA, Medium Bold and Large Non-Bold Text (3:1)"
    },
    "wcag_aaa_small_level": {
-      "message": "Level AAA, Small Non-Bold Text"
+      "message": "Level AAA, Small Non-Bold Text (7:1)"
    },
    "wcag_aaa_large_level": {
-      "message": "Level AAA, Medium Bold and Large Non-Bold Text"
+      "message": "Level AAA, Medium Bold and Large Non-Bold Text (4.5:1)"
    },
 
    "save": {
