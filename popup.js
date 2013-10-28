@@ -42,30 +42,31 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function toDo(what) {
-  var bg = chrome.extension.getBackgroundPage();
-  switch (what) {
+  chrome.runtime.getBackgroundPage(function(backgroundPage) {
+    switch (what) {
     case 'capture_screen':
-      bg.screenshot.captureScreen();
+      backgroundPage.screenshot.captureScreen();
       window.close();
       break;
     case 'capture_window':
-      bg.screenshot.captureWindow();
+      backgroundPage.screenshot.captureWindow();
       window.close();
       break;
     case 'capture_area':
-      bg.screenshot.showSelectionArea();
+      backgroundPage.screenshot.showSelectionArea();
       window.close();
       break;
     case 'capture_webpage':
-      bg.screenshot.captureWebpage();
+      backgroundPage.screenshot.captureWebpage();
       $('loadDiv').style.display = 'block';
       $('item').style.display = 'none';
       break;
     case 'capture_special_page':
-      bg.screenshot.captureSpecialPage();
+      backgroundPage.screenshot.captureSpecialPage();
       window.close();
       break;
   }
+});
 }
 
 function i18nReplace(id, name) {
