@@ -32,7 +32,7 @@
    "name": "__MSG_name__",
    "options_page": "options.html",
    "permissions": [ "tabs", "http://*/*", "https://*/*", "storage" ],
-   "version": "0.5.3",
+   "version": "0.60",
    "short_name": "CC Analyzer",
    "web_accessible_resources": [ "page_context.js", "style.css" ]
 }
