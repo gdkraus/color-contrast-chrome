@@ -5,53 +5,55 @@ Read license.txt for licensing information.
 -->
 
 <html>
-<head>
-<title>WCAG 2.0 Color Contrast Analyzer</title>
-<meta charset="UTF-8">
-<link href="contrast-analyzer.css" rel="stylesheet" type="text/css">
+    <head>
+        <title>WCAG 2.0 Color Contrast Analyzer</title>
+        <meta charset="UTF-8">
+        <link href="contrast-analyzer.css" rel="stylesheet" type="text/css">
 
-<script src="ui.js"></script>
+        <script src="ui.js"></script>
 
-</head>
-<body>
-  <div id="header">
-  <div id="toolbar" class="toolbar">
-<button id="maskButton" type="button">Hide Mask</button>
-<div id="levelEvaluated">
-       <label id="levelEvaluated-label" for="levelEvaluated-options">WCAG Level Evaluated: <span id="levelEvaluated-text"></span></label>
-       <select id="levelEvaluated-options" type="radio" name="levelEvaluated-options">
-       	<option id="WCAG-aa-small" value="WCAG-aa-small"></option>
-  		<option id="WCAG-aa-large" value="WCAG-aa-large"></option>
-  		<option id="WCAG-aaa-small" value="WCAG-aaa-small"></option>
-  		<option id="WCAG-aaa-large" value="WCAG-aaa-large"></option>
-       </select>
-</div>
+    </head>
+    <body>
+        <div id="header">
+            <div id="toolbar" class="toolbar">
+                <button id="maskButton" type="button">Hide Mask</button>
+                <div id="levelEvaluated">
+                    <label id="levelEvaluated-label" for="levelEvaluated-options">WCAG Level Evaluated: <span id="levelEvaluated-text"></span></label>
+                    <select id="levelEvaluated-options" type="radio" name="levelEvaluated-options">
+                        <option id="WCAG-aa-small" value="WCAG-aa-small"></option>
+                        <option id="WCAG-aa-large" value="WCAG-aa-large"></option>
+                        <option id="WCAG-aaa-small" value="WCAG-aaa-small"></option>
+                        <option id="WCAG-aaa-large" value="WCAG-aaa-large"></option>
+                    </select>
+                </div>
 
-<div id="pixelRadius">
-       <label id="pixelRadius-label" for="pixelRadius-options">Pixel Radius: <span id="pixelRadius-text"></span></label>
-       <select id="pixelRadius-options" type="radio" name="pixelRadius-options">
-       	<option id="pixelRadius-1" value="pixelRadius-1">1</option>
-  		<option id="pixelRadius-2" value="pixelRadius-2">2</option>
-  		<option id="pixelRadius-3" value="pixelRadius-3">3</option>
-       </select>
-</div>
+                <div id="pixelRadius">
+                    <label id="pixelRadius-label" for="pixelRadius-options">Pixel Radius: <span id="pixelRadius-text"></span></label>
+                    <select id="pixelRadius-options" type="radio" name="pixelRadius-options">
+                        <option id="pixelRadius-1" value="pixelRadius-1">1</option>
+                        <option id="pixelRadius-2" value="pixelRadius-2">2</option>
+                        <option id="pixelRadius-3" value="pixelRadius-3">3</option>
+                    </select>
+                </div>
 
-<button id="rescanButton" type="button">Rescan</button>
+                <button id="rescanButton" type="button">Rescan</button>
 
-<div id="status">Status: <span id="percentComplete"></span></div>
-  </div>
-  <div class="clear"></div>
-  </div>
-  <div id="showBox">
-  <div id="photo">
-  <canvas id="canvas"></canvas>
-  <canvas id="mask-canvas"></canvas>
-  <div class="layer" id="layer0"></div>
-  </div>
-  </div>
+                <div id="status">Status: <span id="percentComplete"></span></div>
+                <div id="help"><a href="http://accessibility.oit.ncsu.edu/tools/color-contrast-chrome/">Help</a></div>
 
-  <div id="overlay"></div>
-  <script src="contrast-analyzer.js"></script>
-  <script src="image_analysis.js"></script>
-  </body>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="showBox">
+            <div id="photo">
+                <canvas id="canvas"></canvas>
+                <canvas id="mask-canvas"></canvas>
+                <div class="layer" id="layer0"></div>
+            </div>
+        </div>
+
+        <div id="overlay"></div>
+        <script src="contrast-analyzer.js"></script>
+        <script src="image_analysis.js"></script>
+    </body>
 </html>

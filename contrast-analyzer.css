@@ -94,3 +94,9 @@ ul {
 #percentComplete {font-weight:normal;}
 #levelEvaluatedText {font-weight:normal;}
 #pixelRadiusText {font-weight:normal;}
+#help{display:inline;float:right;padding-top:6px;padding-right:10px;}
+#help a{font-weight:bold;color:#600;}
+#help a:link{color:#600;}
+#help a:visited{color:#600;}
+#help a:hover{color:#000;}
+#help a:active{color:#666;}
