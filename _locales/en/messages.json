@@ -15,7 +15,7 @@
       "message": "Capture Whole Page"
    },
    "capture_window_warning": {
-      "message": "Capture Visible Content<br />(Refresh page for more options)"
+      "message": "Capture Visible Content<br />(Try refreshing page for more options)"
    },
    "capture_window": {
       "message": "Capture Visible Content"
