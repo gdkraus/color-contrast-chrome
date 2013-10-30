@@ -5,11 +5,12 @@ Read license.txt for licensing information.
 */
 
 
-var w = document.getElementById('canvas').getAttribute('width');
-var h = document.getElementById('canvas').getAttribute('height');
-var image = new Array(w * h);
+var w = document.getElementById('canvas').getAttribute('width'); // width of the image
+var h = document.getElementById('canvas').getAttribute('height'); // height of the image
+var image = new Array(w * h); // a container to receive the resulting image
 
 function draw() {
+    // create a canvas element to draw the resulting image on
     var canv = document.createElement('canvas');
     canv.id = 'contrastMask';
     canv.width = w;
@@ -21,8 +22,8 @@ function draw() {
     var id = myContext.createImageData(w, h); 
     var d = id.data; 
 
-    var pixelData;
-    var pixelLocation;
+    var pixelData; // the value for the RGB of the pixel
+    var pixelLocation; // the location to draw the pixel to
 
     for (var m = 0; m < h; m += 1) {
         for (var n = 0; n < w; n += 1) {
@@ -31,32 +32,36 @@ function draw() {
             id.data[pixelLocation + 0] = pixelData;
             id.data[pixelLocation + 1] = pixelData;
             id.data[pixelLocation + 2] = pixelData;
-            id.data[pixelLocation + 3] = 192;
+            id.data[pixelLocation + 3] = 192; //opacity of 75%
         }
-    myContext.putImageData(id, 0, 0);
+        // draw the pixel
+        myContext.putImageData(id, 0, 0);
     }
 }
 
+// launch the analysis as a separate thread
 var myWorker = new Worker("background-image-analysis.js");
 
 myWorker.onmessage = function (oEvent) {
+    
     if (oEvent.data.status !== undefined) {
+        // update the status of the process
         if(oEvent.data.status=='done'){
-        	document.getElementById('percentComplete').innerHTML = "Rendering...";
+            document.getElementById('percentComplete').innerHTML = "Rendering...";
         } else {
-	        document.getElementById('percentComplete').innerHTML = oEvent.data.status + '%';
-	    }
+            document.getElementById('percentComplete').innerHTML = oEvent.data.status + '%';
+        }
     }
 
     if (oEvent.data.data !== undefined) {
-        
+        // receive the resulting image
         image = new Uint8Array(oEvent.data.data);
 
         draw();
 
         myWorker.terminate();
         document.getElementById('percentComplete').innerHTML = 'Complete';
-		enableMaskButton(true);
+        enableMaskButton(true);
     }
 
     try {
@@ -79,6 +84,7 @@ var myVars = new Array();
 myVars[0] = "contrastLevel";
 myVars[1] = "pixelRadius";
 
+// get the contrast level
 chrome.storage.sync.get(myVars, function (obj) {
     var level = 4.5;
     var radius = 2;
@@ -94,17 +100,18 @@ chrome.storage.sync.get(myVars, function (obj) {
         level = 4.5;
     }
     
+    // get the pixel radius
     radius = obj['pixelRadius'];
     if(radius < 1 || radius > 3 || typeof radius == 'undefined') {
-    	radius = 2;
+        radius = 2;
     } else {
-    	radius = obj['pixelRadius'];
+        radius = obj['pixelRadius'];
     }
     startAnalysis(level,radius);
 });
 
 function startAnalysis(level, radius) {
-
+    // send the image and parameters to the thread
     myWorker.postMessage({
         "width": w,
         "height": h,
