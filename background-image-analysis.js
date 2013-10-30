@@ -25,7 +25,9 @@ var nextPostMessage = 0; // the number of calculations to complete before sendin
 
 
 function evaluateColorContrast(r1, g1, b1, r2, g2, b2) {
-    // This function is optimized to reduce function calls. This is for speed performance
+    // This function is an optimized version of the algorithm found at
+    // https://github.com/gdkraus/wcag2-color-contrast
+    // It is optimized to reduce function calls. This is for speed performance
     // because this function is called for every single pixel comparison. The code could
     // be written more cleanly, but the overhead of the function calls adds significantly
     // to the processing time.
