@@ -542,6 +542,6 @@ function enableMaskButton(v) {
 	if(v){
 		$('maskButton').removeAttribute('disabled');
 	} else {
-		$('maskButton').setAttribute('disabled');	
+		$('maskButton').setAttribute('disabled','true'); // need to explicitly set the value to true otherwise it will fail
 	}
 } 
