@@ -15,6 +15,9 @@ I used the code from this project for creating the draggable selection box. This
 
 Versions
 
+1.03
+* fixed a bug where the WCAG 2 and pixel radius settings were not sticking once you clicked the rescan button
+
 1.02
 * added better support for processing local files within Chrome
 
