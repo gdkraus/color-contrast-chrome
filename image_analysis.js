@@ -48,7 +48,7 @@ function draw() {
     var bb = dataURItoBlob(canv.toDataURL("image/png"));
 
     var a = document.getElementById('downloadButton');
-    a.download = 'contrast' + '.png';
+    a.download = 'contrast-'+$('levelEvaluated-options').value.toLowerCase() + '.png';
     a.href = window.URL.createObjectURL(bb);
 
 }

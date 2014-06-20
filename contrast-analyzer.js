@@ -466,6 +466,12 @@ $('mask-canvas').addEventListener(
 
 enableMaskButton(false);
 enableDownloadButton(false);
+    
+chrome.runtime.getPlatformInfo(function(info) {
+    if(info.os=='win'){ 
+    addClass($('downloadButton'), 'button-win');        
+    }
+});
 
 // Control more tools list showing and hiding.
 (function() {

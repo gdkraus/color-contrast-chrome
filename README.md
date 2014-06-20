@@ -15,6 +15,9 @@ I used the code from this project for creating the draggable selection box. This
 
 Versions
 
+1.1.1
+* adjusted CSS for Windows buttons
+
 1.1.0
 * added ability to download the image analysis to a local file
 
