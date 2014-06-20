@@ -100,3 +100,38 @@ ul {
 #help a:visited{color:#600;}
 #help a:hover{color:#000;}
 #help a:active{color:#666;}
+
+.button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb;
+    margin: 0em;
+    font: -webkit-small-control;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    padding: 2px 6px 3px;
+    border: 2px outset buttonface;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: buttonface;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+.inactive {
+   pointer-events: none;
+   cursor: default;
+   opacity: 0.4;
+}
