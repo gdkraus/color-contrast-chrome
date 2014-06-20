@@ -158,31 +158,23 @@ function iterativeAnalyze(radius) {
                         
                         // + + direction
                         if (evaluateColorContrast(basePixelRed, basePixelGreen, basePixelBlue, pix[i2 * 4 + (w * j * 4) + (k * 4)], pix[i2 * 4 + (w * j * 4) + (k * 4) + 1], pix[i2 * 4 + (w * j * 4) + (k * 4) + 2])) {
-                            success = +1;
-                        } //else {
-                        //failure = +1;
-                        //}
+                            success += 1;
+                        }
                         
                         // + - direction
                         if (evaluateColorContrast(basePixelRed, basePixelGreen, basePixelBlue, pix[i2 * 4 + (w * j * 4) - (k * 4)], pix[i2 * 4 + (w * j * 4) - (k * 4) + 1], pix[i2 * 4 + (w * j * 4) - (k * 4) + 2])) {
-                            success = +1;
-                        } //else {
-                        //failure = +1;
-                        //}
+                            success += 1;
+                        }
                         
                         // - + direction
                         if (evaluateColorContrast(basePixelRed, basePixelGreen, basePixelBlue, pix[i2 * 4 - (w * j * 4) + (k * 4)], pix[i2 * 4 - (w * j * 4) + (k * 4) + 1], pix[i2 * 4 - (w * j * 4) + (k * 4) + 2])) {
-                            success = +1;
-                        } //else {
-                        //failure = +1;
-                        //}
+                            success += 1;
+                        }
                         
                         // - - direction
                         if (evaluateColorContrast(basePixelRed, basePixelGreen, basePixelBlue, pix[i2 * 4 - (w * j * 4) - (k * 4)], pix[i2 * 4 - (w * j * 4) - (k * 4) + 1], pix[i2 * 4 - (w * j * 4) - (k * 4) + 2])) {
-                            success = +1;
-                        } //else {
-                        //failure = +1;
-                        //}
+                            success += 1;
+                        }
                         
                         if(success > 0){
                             break; // if a border if found, stop
