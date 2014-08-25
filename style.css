@@ -12,7 +12,7 @@
   position: absolute;
   top:100px;
   width:250px;
-  z-index: 99999;
+  z-index: 2147483647;
 }
 #sc_drag_container {
   border: 1px solid #0000FF;
@@ -23,7 +23,7 @@
   padding: 0;
   position: relative ;
   width: 100%;
-  z-index:99997;
+  z-index:2147483647;
 }
 #sc_drag_area_protector {
   border-radius: 0px 0px;
@@ -33,7 +33,7 @@
   top:0;
   position: absolute;
   width:100%;
-  z-index:98500;
+  z-index:2147483647;
   margin: 0;
   
   min-width: 1px;
@@ -54,7 +54,7 @@
   padding-right:4px;
   text-align:center;
   top: -18px;
-  z-index:99998;
+  z-index:2147483647;
 }
 #sc_drag_cancel, #sc_drag_crop {
   background-color: rgba(0, 0, 0, 0.5);
@@ -66,7 +66,7 @@
   height:22px;
   line-height:22px;
   position:absolute ;
-  z-index:99998
+  z-index:2147483647;
 }
 #sc_drag_crop {
   bottom:-25px;
@@ -86,7 +86,7 @@
   background-color: #000000;
   opacity: 0.5;
   position: absolute;
-  z-index:97000;
+  z-index:2147483647;
   border: 0;
 }
 #sc_drag_shadow_top {
@@ -111,7 +111,7 @@
   height: 5px;
   position: absolute;
   width: 5px;
-  z-index:99998;
+  z-index:2147483647;
 }
 #sc_drag_north_east {
   cursor: ne-resize ;
