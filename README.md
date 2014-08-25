@@ -15,6 +15,9 @@ I used the code from this project for creating the draggable selection box. This
 
 Versions
 
+1.1.2
+* adjusted z-index for the draggable area to the maximum allowed value of 2147483647 to help ensure it will not be positioned underneath other elements
+
 1.1.1
 * adjusted CSS for Windows buttons
 
