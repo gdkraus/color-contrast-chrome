@@ -76,6 +76,7 @@ var screenshot = {
                 //return true;
                 break;
             }
+            return true;
         });
     },
     /**
